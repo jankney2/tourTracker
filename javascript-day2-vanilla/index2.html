@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles2.css">
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: lightseagreen;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      width: 300px;
+      margin-top: 20px;
+    }
+
+    button {
+      width: 150px;
+      margin-top: 10px;
+    }
+
+    ul {
+      margin-top: 20px;
+    }
+
+    .todo {
+      cursor: all-scroll;
+    }
+  </style>
+  <h1>To Do List</h1>
+  <form action="">
+    
+    <input type="text">
+    <button>Add todo</button>
+  </form>
+    <ul>
+      
+    </ul>
+    
+  <script>
+    const inputElement = document.querySelector("input");
+    const ul = document.querySelector("ul")
+
+    function addToDo() {
+      if (inputElement.value !== "") {
+        var newTodo = document.createElement("li")
+        newTodo.innerText = inputElement.value
+        ul.append(newTodo)
+        newTodo.setAttribute("class", 'todo')
+        inputElement.value = ""
+      }
+    }
+
+    function removeToDo (clickEvent) {
+      
+      clickEvent.target.remove()
+    }
+    // Never do this because hackerz
+    // function addToDo() {
+    //   console.log(inputElement.value)
+    //   let listItems= ul.innerHTML
+    //   let newToDos= `${listItems} <li>${inputElement.value}</li>`;
+    //   ul.innerHTML= newToDos;
+
+
+    // }
+
+
+    document.querySelector("button").addEventListener("click", addToDo)
+  </script>
+</body>
+
+</html>

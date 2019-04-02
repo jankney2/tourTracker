@@ -1,0 +1,66 @@
+body * {
+  background-color: burlywood;
+}
+
+
+.logo {
+  border: 2px solid black;
+  text-align: center;
+  height: 80px;
+  
+}
+
+header {
+  /* width: 80%; */
+  margin: auto;
+  text-align: center;
+  height: 30vh;
+  border: 2px solid burlywood;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid pink;
+
+
+}
+
+.quick {
+  height: 100px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px green solid;
+}
+
+
+* {
+  margin: 25px;
+  
+}
+
+.left {
+  background-color: green;
+  text-align: center;
+  padding: 50px 100px;
+  border: 2px solid yellow;
+}
+
+footer {
+  /* width: 80%; */
+  margin: auto;
+  text-align: center;
+  height: 80px;
+  border: 2px solid burlywood;
+}
+
+nav div {
+  background-color:gray;
+  padding: 30px 100px;
+
+}
+
