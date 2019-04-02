@@ -1,0 +1,80 @@
+body {
+  margin:0px;
+  font-family: sans-serif
+}
+
+.navBar {
+position: fixed;
+width:100%;
+top: 0px;
+display: flex;
+justify-content: space-around;
+height: 80px;
+background: white;
+}
+
+.links {
+  list-style-type: none;
+  float:left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bigPic{
+  background-color: rgb(255, 233, 233);
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  margin: 80px 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+.bigPic p {
+  margin-left: 20px;
+  max-width: 25%;
+}
+
+.block2 {
+  display:flex;
+  justify-content: space-around;
+  margin: 50px 10%;
+}
+
+.fourBlock {
+  border: 2px dotted black;
+  height: 10vh;
+  width: 15vw;
+
+}
+
+
+.trickyOne {
+  border: dotted black 2px;
+  height: 75vh;
+  margin: 50px 10%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bigPhoto {
+  border: dotted black 2px;
+  height: 20vh;
+  width: 20vh;
+}
+
+.row1 {
+  height: 40rem;
+}
+
+.row2 {
+  height: 40rem;
+}
+
+
+.trickyOne div {
+  border: dotted red 2px;
+  margin: 5px;
+}
