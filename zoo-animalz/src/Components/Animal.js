@@ -18,7 +18,7 @@ export default class Animal extends Component {
         <img src={animal.imageUrl} alt="animalz" width="200" />
         <p>species: {animal.species}</p>
         <p>quantity: {animal.quantity}</p>
-
+    
 
     </div>
     
