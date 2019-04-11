@@ -3,11 +3,12 @@ import React, { Component } from 'react'
 import axios from "axios"
 
 import './CssFiles/Show.css'
+import './CssFiles/EditShow.css'
 
 export default class Show extends Component {
   constructor(props) {
     super(props)
-
+    //CHANGE EDIT BACK TO TRUE! 
     this.state = {
       edit: false,
       imgUrl: this.props.imgUrl,
@@ -58,34 +59,46 @@ export default class Show extends Component {
 
   render() {
     return (
+      //ternary 1- edit view
       this.state.edit ?
-        <div className='showContainer'>
 
-          <img src={this.props.imgUrl} alt='' width="80px" />
-          <input type="text" placeholder="New Image URL" name="imgUrl" onChange={this.changeHandler} />
+        <div>
+          <div className='showContainer'>
 
-          <p>{this.props.date}</p>
-          <input type="date" placeholder="New date" name="date" onChange={this.changeHandler} />
-
-          <p>{this.props.venue}</p>
-          <input type="text" placeholder="New venue" name="venue" onChange={this.changeHandler} />
-
-          <p>{this.props.cityState}</p>
-          <input type="text" placeholder="new City/State" name="cityState" onChange={this.changeHandler} />
+            <img src={this.props.imgUrl} alt='' width="80px" />
+            <p>{this.props.date}</p>
+            <p>{this.props.venue}</p>
+            <p>{this.props.cityState}</p>
 
 
-          <button onClick={this.toggleEdit}>cancel</button>
-          <button onClick={() => {
+            <div>
+            <input type="text" placeholder="New Image URL" name="imgUrl" onChange={this.changeHandler} />
+
+            <input type="date" placeholder="New date" name="date" onChange={this.changeHandler} />
+
+            <input type="text" placeholder="New venue" name="venue" onChange={this.changeHandler} />
+
+            <input type="text" placeholder="new City/State" name="cityState" onChange={this.changeHandler} />
+          
+          
+          <button className="button" onClick={this.toggleEdit}>Cancel</button>
+  
+          <button className="button" onClick={() => {
             this.putReq(this.props.position)
             this.toggleEdit()
             window.location.reload()
-          }}>Save Show!</button>
-        </div> :
-
-
+          }}>Save</button>
+            
+            
+            </div>
+          </div>
+        </div>
+        :
+        
+        //ternary 2- non-edit view
 
         <div className="showContainer">
-          <img src={this.props.imgUrl} alt='' width="80px" />
+          <img src={this.props.imgUrl} alt='' width="100px" />
           <div className="pContainer">
             <p>{this.props.date}</p>
             <p>{this.props.venue}</p>

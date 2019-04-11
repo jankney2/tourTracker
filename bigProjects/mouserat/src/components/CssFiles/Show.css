@@ -2,9 +2,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 85%;
+  width: 75%;
   margin: auto;
+  border-bottom: solid red 2px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+
+  padding-bottom: 40px;
 }
+
+
 
 .buttonContainer {
   display: flex;
@@ -15,4 +22,12 @@
   display: flex;
   width: 40vw;
   justify-content: space-around;
+
+
+}
+
+.pContainer p {
+  margin: 10px ;
+  /* width: 100px; */
+  text-align: left;
 }
