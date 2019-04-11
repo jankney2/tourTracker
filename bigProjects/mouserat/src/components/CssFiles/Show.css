@@ -1,0 +1,18 @@
+.showContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pContainer {
+  display: flex;
+  width: 40vw;
+  justify-content: space-around;
+}

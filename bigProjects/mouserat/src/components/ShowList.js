@@ -15,13 +15,27 @@ export default class ShowList extends Component {
 
 
   //post request is done! 
-  postClickHandler=(obj) => {
-    axios.post('/api/shows', obj ).then((res)=> {
+  postClickHandler = (obj) => {
+    axios.post('/api/shows', obj).then((res) => {
       this.setState({
         shows: res.data
       })
       console.log(res)
-    }).catch((err)=>console.log("error", err))
+    }).catch((err) => console.log("error", err))
+  }
+
+
+//delete request done! 
+  deleteHandler = (deleteId) => {
+
+    axios.delete(`/api/shows/${deleteId}`).then((response) => {
+      
+      console.log(response.data)
+      this.setState({
+        shows: response.data
+      })
+    }).catch((err)=> console.log("error", err))
+
   }
 
   //component did mount sets state to response of the get request. 
@@ -39,19 +53,25 @@ export default class ShowList extends Component {
         {/* navbar */}
 
 
-        <CreateShow postClickHandler={this.postClickHandler} shows={this.shows}/>
+        <CreateShow postClickHandler={this.postClickHandler} shows={this.shows} />
 
-              {this.state.shows.map((element) => {
-                return <Show
-                  key={element.id}
-                  imgUrl={element.imgUrl}
-                  cityState={element.cityState}
-                  date={element.date}
-                  venue={element.venue} />
-              })}
-    </div>
-            )
-          }
-          
-          
+        {this.state.shows.map((element) => {
+          return <Show
+            deleteHandler={this.deleteHandler}
+            key={element.id}
+            position={element.id}
+            imgUrl={element.imgUrl}
+            cityState={element.cityState}
+            date={element.date}
+            venue={element.venue} />
+        })}
+
+
+        {/* footer */}
+
+      </div>
+    )
+  }
+
+
 }

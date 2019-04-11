@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import axios from "axios"
+import './CssFiles/CreateShow.css'
 
 export default class CreateShow extends Component {
 
@@ -19,20 +19,6 @@ changeHandler= (e) => {
   })
 }
 
-
-// postClickHandler=() => {
-//   axios.post('/api/shows', {
-//     date: this.state.date,
-//     venue: this.state.venue, 
-//     cityState: this.state.cityState, 
-//     imgUrl: this.state.imgUrl, 
-//   } ).then((res)=> {
-//     this.setState({
-//       shows: res.data
-//     })
-//     console.log(res)
-//   }).catch((err)=>console.log("error", err))
-// }
 
   render() {
     
@@ -69,9 +55,11 @@ changeHandler= (e) => {
        placeholder="image URL"/>
       
       
-      <button onClick={()=>{
+      <button className="button" onClick={()=>{
         let newObj= this.state
-        this.props.postClickHandler(newObj)}}>Create Show!</button>
+        this.props.postClickHandler(newObj)
+        // document.getElementsByTagName("input").map(element=> element.innerText='')
+       }}>Create New Show! </button>
     </div>
 
     )

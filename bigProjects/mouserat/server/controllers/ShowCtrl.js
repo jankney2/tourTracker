@@ -62,8 +62,9 @@ module.exports = {
     //splice it out 
 
     let { id } = req.params
-    let spliceMe= shows.find(element=>{+element.id===+id})
-    shows.splice(spliceMe, 1)
+    let index= shows.findIndex(element=>{
+      return +element.id===+id})
+    shows.splice(index, 1)
     res.send(shows)
   },
   
@@ -89,7 +90,7 @@ module.exports = {
 
     shows.splice(index, 1, itemToUpdate)
 
-    res.send(shows)
+    res.send(itemToUpdate)
   },
 
 }
