@@ -4,14 +4,18 @@ import axios from "axios"
 
 export default class Show extends Component {
 
-  constructor(props) {
-    super(props)
-    
-  }
+  
 
 render(){
   return(
-    <div>Hey boyo</div>
+    <div>
+      <img src={this.props.imgUrl} alt='' width="80px"/>
+      <p>{this.props.date}</p>
+      <p>{this.props.venue}</p>
+      <p>{this.props.cityState}</p>
+
+
+    </div>
   )
 }
 
