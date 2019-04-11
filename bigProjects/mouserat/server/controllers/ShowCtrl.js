@@ -1,24 +1,28 @@
 let id = 1
 let shows = [
   {
+    imgUrl: 'https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_651,q_75,w_979/https://assets.simpleviewinc.com/simpleview/image/upload/crm/utahvalley/The-Velour_309f1a9d-5056-a36a-0b5c11bf55b3697b.jpg',
     date: '1/1/19',
     venue: 'The Velour',
     cityState: 'Provo, UT',
     id: id++,
   },
   {
+    imgUrl:'https://media.deseretdigital.com/file/8c58d70965?type=jpeg&quality=55&c=15&a=4379240d' ,
     date: '2/1/19',
     venue: 'The Viv',
     cityState: 'Salt Lake City, UT',
     id: id++,
   },
   {
+    imgUrl: 'http://static-34.sinclairstoryline.com/resources/media/267b08e7-ccb9-44c2-ad9d-9889731a6315-large16x9_VirginiaBeach.jpg?1519239266832',
     date: '3/1/19',
     venue: 'Kilby Court',
     cityState: 'Denver, CO',
     id: id++,
   },
   {
+    imgUrl: 'https://lastfm-img2.akamaized.net/i/u/ar0/a09155d6ed343d12b30f2064d670da7e.jpg',
     date: '4/1/19',
     venue: 'the 9:30 club',
     cityState: 'Washington DC',
@@ -45,6 +49,7 @@ module.exports = {
       venue: req.body.venue,
       cityState: req.body.cityState,
       id: id++,
+      imgUrl: req.body.imgUrl,
     }
     shows.push(newShow)
 
@@ -68,7 +73,7 @@ module.exports = {
     //splice out old object, splice in new obj. 
 
     let {id}= req.params
-    let {cityState, date, venue}= req.body
+    let {cityState, date, venue, imgUrl}= req.body
     
     let index= shows.findIndex((element)=> +element.id===+id)
 
@@ -78,7 +83,8 @@ module.exports = {
       date: date, 
       cityState: cityState,
       venue: venue,
-      id: id
+      id: id,
+      imgUrl: imgUrl,
     }
 
     shows.splice(index, 1, itemToUpdate)

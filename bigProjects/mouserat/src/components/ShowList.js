@@ -9,10 +9,20 @@ export default class ShowList extends Component {
     super()
     this.state = {
       shows: [],
-      venue: ''
+
     }
   }
 
+
+  //post request is done! 
+  postClickHandler=(obj) => {
+    axios.post('/api/shows', obj ).then((res)=> {
+      this.setState({
+        shows: res.data
+      })
+      console.log(res)
+    }).catch((err)=>console.log("error", err))
+  }
 
   //component did mount sets state to response of the get request. 
   componentDidMount() {
@@ -29,7 +39,7 @@ export default class ShowList extends Component {
         {/* navbar */}
 
 
-        <CreateShow />
+        <CreateShow postClickHandler={this.postClickHandler} shows={this.shows}/>
 
               {this.state.shows.map((element) => {
                 return <Show

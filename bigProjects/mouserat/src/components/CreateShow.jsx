@@ -19,7 +19,23 @@ changeHandler= (e) => {
   })
 }
 
+
+// postClickHandler=() => {
+//   axios.post('/api/shows', {
+//     date: this.state.date,
+//     venue: this.state.venue, 
+//     cityState: this.state.cityState, 
+//     imgUrl: this.state.imgUrl, 
+//   } ).then((res)=> {
+//     this.setState({
+//       shows: res.data
+//     })
+//     console.log(res)
+//   }).catch((err)=>console.log("error", err))
+// }
+
   render() {
+    
     return(
 
       <div>
@@ -53,7 +69,9 @@ changeHandler= (e) => {
        placeholder="image URL"/>
       
       
-      <button>Create Show!</button>
+      <button onClick={()=>{
+        let newObj= this.state
+        this.props.postClickHandler(newObj)}}>Create Show!</button>
     </div>
 
     )
