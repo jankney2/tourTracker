@@ -55,21 +55,28 @@ export default class ShowList extends Component {
 
         <CreateShow postClickHandler={this.postClickHandler} shows={this.shows} />
 
-{/* searchbar feature to search shows for certain cities
-        <label htmlFor= "searchbar"> Find Your Town!
-      <input type="text" placeholder="search here" onChange= {(e)=>{
-        this.setState({
+ {/* searchbar feature to search shows for certain cities */}
+        
+        
+        <div className="searchInput">
+        <label>Find your City</label>
+       <input type="text" placeholder="search here" onChange= {(e)=>{
+         this.setState({
           searchVal: e.target.value
-        })
+         })
 
-        this.state.shows.filter((element)=>{ 
-          let searchItem=this.searchVal
-          return element.cityState===searchItem})
 
-      }}/>
-      </label> */}
+       }}/>
+
+       </div>
+
+
 {/* IF SOMETHING IS WRONG IT IS PROBABLY Here */}
-        {this.state.shows.map((element) => {
+        {this.state.shows.filter((element)=> {
+          
+          
+          return element.cityState.toUpperCase().includes(this.state.searchVal.toUpperCase())
+        }).map((element) => {
           return <Show
             deleteHandler={this.deleteHandler}
             key={element.id}

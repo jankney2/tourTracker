@@ -1,18 +1,21 @@
 .homePage {
-  background-color: #fff;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('https://images.unsplash.com/photo-1472390155757-7704d54b9dc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+  justify-content: space-around;
+  background-image: 
+
+  url('https://images.unsplash.com/photo-1472390155757-7704d54b9dc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
   background-size: cover;
-  color: white;
+
+  background-repeat: no-repeat;
+
+  color: #F5f5f5;
+  height: 100vh;
 }
 
-.homePage * {
-  /* margin: 4%; */
-}
+
 
 h3 {
   text-align: center;
@@ -31,7 +34,4 @@ h3 {
 
 }
 
-.homePage button {
-  background: whitesmoke;
-}
 

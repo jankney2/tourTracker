@@ -28,6 +28,48 @@ let shows = [
     cityState: 'Washington DC',
     id: id++,
   },
+  {
+    imgUrl: 'https://images.unsplash.com/photo-1495582699501-4dc05e58b69f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+    date: '04/01/2019',
+    venue: 'Muse Music Cafe',
+    cityState: 'Provo, UT',
+    id: id++,
+  },
+  {
+    imgUrl: 'https://images.unsplash.com/photo-1508973379184-7517410fb0bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+    date: '04/01/2019',
+    venue: 'the 9:30 club',
+    cityState: 'Provo, UT',
+    id: id++,
+  },
+  {
+    imgUrl: 'https://images.unsplash.com/photo-1490915829216-3f2347b1e830?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+    date: '04/01/2020',
+    venue: 'Kiwanis Park',
+    cityState: 'Provo, UT',
+    id: id++,
+  },
+  {
+    imgUrl: 'https://lastfm-img2.akamaized.net/i/u/ar0/a09155d6ed343d12b30f2064d670da7e.jpg',
+    date: '04/02/2019',
+    venue: "mom's backyard",
+    cityState: 'Provo, UT',
+    id: id++,
+  },
+  {
+    imgUrl: 'https://lastfm-img2.akamaized.net/i/u/avatar170s/cfa8de12bf2f41acb18d33337bb82a44.jpg',
+    date: '04/19/2019',
+    cityState: 'Washington DC',
+    venue: 'the 9:30 club',
+    id: id++,
+  },
+  {
+    imgUrl: 'https://static.spin.com/files/field/image/090416-wilco.jpg',
+    date: '04/20/2019',
+    venue: 'Carnegie Hall',
+    cityState: 'Washington DC',
+    id: id++,
+  },
 ]
 
 

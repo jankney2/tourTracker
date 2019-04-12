@@ -9,7 +9,7 @@ export default class Navbar extends Component {
 
 
 <div className="navBar">
-      <style ref="stylesheet" link="./CssFiles/Navbar.css"></style>
+      
       <h1>MouseRat Tour Manager</h1>
       
       <nav>

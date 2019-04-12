@@ -1,12 +1,24 @@
-
-
-.navBar {
-
+.navBar{
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  width:75%;
+  margin:auto;
+  
+}
+
+.navBar h1 {
+/* 
+margin-left: 5%; */
 
 }
 
 
 
+.navBar button {
+  border-color: #F5f5f5;
+  color: #F5f5f5;
+  /* margin-left: 5%; */
+  /* right: 20px; */
+  margin: 0px;
+}

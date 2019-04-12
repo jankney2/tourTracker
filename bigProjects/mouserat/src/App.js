@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
     super()
     this.state= {
-      homepage:true,
+      homepage:false,
     }
   }
   
@@ -24,7 +24,7 @@ class App extends Component {
     return (
       //homepage ternary
       this.state.homepage ?
-
+      
       <div>
         <Home toggleTour={this.toggleTour}/>
 

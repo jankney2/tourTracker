@@ -25,8 +25,8 @@ export default class CreateShow extends Component {
     return (
 
       <div>
-        <h2>Create new Show</h2>
 
+        <div className="inputHandler">
         <input
           name="imgUrl"
           onChange={this.changeHandler}
@@ -62,7 +62,7 @@ export default class CreateShow extends Component {
           this.props.postClickHandler(newObj)
           // document.getElementsByTagName("input").map(element=> element.innerText='')
         }}>Create New Show! </button>
-        
+        </div>
 
       </div>
 

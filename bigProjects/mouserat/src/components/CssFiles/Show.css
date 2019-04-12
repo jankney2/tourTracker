@@ -1,10 +1,24 @@
+
+.searchInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin-left:25%;
+  margin-bottom: 4%;
+
+}
+
+
+
+
 .showContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 75%;
   margin: auto;
-  border-bottom: solid #Caebf2 2px;
+  border-bottom: solid #AB987A 2px;
   flex-wrap: wrap;
   margin-top: 25px;
 
