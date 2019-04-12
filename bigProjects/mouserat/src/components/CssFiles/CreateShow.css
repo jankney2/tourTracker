@@ -9,3 +9,8 @@ input {
 input:focus {
 outline: none;
 }
+
+h2 {
+  text-align: left;
+  padding-left: 7%;
+}

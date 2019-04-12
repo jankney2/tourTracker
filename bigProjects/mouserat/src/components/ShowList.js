@@ -9,7 +9,7 @@ export default class ShowList extends Component {
     super()
     this.state = {
       shows: [],
-
+      searchVal: ''
     }
   }
 
@@ -50,11 +50,25 @@ export default class ShowList extends Component {
   render() {
     return (
       <div>
-        {/* navbar */}
+
 
 
         <CreateShow postClickHandler={this.postClickHandler} shows={this.shows} />
 
+{/* searchbar feature to search shows for certain cities
+        <label htmlFor= "searchbar"> Find Your Town!
+      <input type="text" placeholder="search here" onChange= {(e)=>{
+        this.setState({
+          searchVal: e.target.value
+        })
+
+        this.state.shows.filter((element)=>{ 
+          let searchItem=this.searchVal
+          return element.cityState===searchItem})
+
+      }}/>
+      </label> */}
+{/* IF SOMETHING IS WRONG IT IS PROBABLY Here */}
         {this.state.shows.map((element) => {
           return <Show
             deleteHandler={this.deleteHandler}

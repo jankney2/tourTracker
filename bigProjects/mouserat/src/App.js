@@ -1,18 +1,41 @@
 import React, { Component } from 'react';
-import axios from "axios"
+import Home from './components/Home'
 import './App.css';
 import ShowList from './components/ShowList'
 import Navbar from './components/Navbar';
 class App extends Component {
 
+  constructor() {
+    super()
+    this.state= {
+      homepage:true,
+    }
+  }
   
+
+  toggleTour = () => {
+    this.setState({
+      homepage: !this.state.homepage,
+    })
+  }
   render() {
   
     
     return (
-      <div className="App">
+      //homepage ternary
+      this.state.homepage ?
+
+      <div>
+        <Home toggleTour={this.toggleTour}/>
+
+
+      </div>
+      
+      //if false 
+      :
+      <div>
         
-      <Navbar />
+      <Navbar toggleTour={this.toggleTour}/>
       <ShowList />
 
 

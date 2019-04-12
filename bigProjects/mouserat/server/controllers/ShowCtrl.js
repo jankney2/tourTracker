@@ -2,28 +2,28 @@ let id = 1
 let shows = [
   {
     imgUrl: 'https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_651,q_75,w_979/https://assets.simpleviewinc.com/simpleview/image/upload/crm/utahvalley/The-Velour_309f1a9d-5056-a36a-0b5c11bf55b3697b.jpg',
-    date: '1/1/19',
+    date: '01/01/2019 ',
     venue: 'The Velour',
     cityState: 'Provo, UT',
     id: id++,
   },
   {
     imgUrl:'https://media.deseretdigital.com/file/8c58d70965?type=jpeg&quality=55&c=15&a=4379240d' ,
-    date: '2/1/19',
+    date: '02/01/2019',
     venue: 'The Viv',
     cityState: 'Salt Lake City, UT',
     id: id++,
   },
   {
     imgUrl: 'http://static-34.sinclairstoryline.com/resources/media/267b08e7-ccb9-44c2-ad9d-9889731a6315-large16x9_VirginiaBeach.jpg?1519239266832',
-    date: '3/1/19',
+    date: '03/01/2019',
     venue: 'Kilby Court',
     cityState: 'Denver, CO',
     id: id++,
   },
   {
     imgUrl: 'https://lastfm-img2.akamaized.net/i/u/ar0/a09155d6ed343d12b30f2064d670da7e.jpg',
-    date: '4/1/19',
+    date: '04/01/2019',
     venue: 'the 9:30 club',
     cityState: 'Washington DC',
     id: id++,
@@ -37,7 +37,7 @@ let shows = [
 module.exports = {
 
   get: (req, res) => {
-
+    // shows.sort((a,b)=>{return a-b})
     res.status(200).send(shows)
   },
 
@@ -51,6 +51,7 @@ module.exports = {
       id: id++,
       imgUrl: req.body.imgUrl,
     }
+    
     shows.push(newShow)
 
     res.send(shows)
