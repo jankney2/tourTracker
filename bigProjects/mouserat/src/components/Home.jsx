@@ -1,16 +1,14 @@
 import React, {Component} from 'react'
 import "./CssFiles/HomePage.css"
-import Instafeed from 'instafeed.js'
+
+import Footer from './Footer'
+
 export default class Home extends Component {
 
   
 
   render() {
-    let feed= new Instafeed({
-      get:'tagged',
-      tagName: 'brycecanyon', 
-      clientId: '6b8205113ba54412866a7d2c3130a656'
-    });
+
     
     
     return(
@@ -28,14 +26,8 @@ export default class Home extends Component {
         
 
 
-        <div id="instafeed">{
-          
 
-          feed.run()
-        }</div>
-
-        <div>Social Links or Footer (import?)</div>
-
+        <Footer />
       </div>
 
 

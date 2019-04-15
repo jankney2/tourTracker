@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Show from "./Show"
 import CreateShow from './CreateShow';
+import Footer from './Footer'
 export default class ShowList extends Component {
 
 
@@ -93,7 +94,8 @@ export default class ShowList extends Component {
         })}
 
 
-        {/* footer */}
+        <Footer />
+      
 
       </div>
     )
