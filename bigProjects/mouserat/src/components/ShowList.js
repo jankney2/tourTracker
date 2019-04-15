@@ -14,6 +14,10 @@ export default class ShowList extends Component {
   }
 
 
+//changeHandler/Put Req moved around
+  
+
+
   //post request is done! 
   postClickHandler = (obj) => {
     axios.post('/api/shows', obj).then((res) => {
@@ -72,9 +76,7 @@ export default class ShowList extends Component {
 
 
 {/* IF SOMETHING IS WRONG IT IS PROBABLY Here */}
-        {this.state.shows.filter((element)=> {
-          
-          
+        {this.state.shows.filter((element)=> {  
           return element.cityState.toUpperCase().includes(this.state.searchVal.toUpperCase())
         }).map((element) => {
           return <Show
@@ -84,7 +86,10 @@ export default class ShowList extends Component {
             imgUrl={element.imgUrl}
             cityState={element.cityState}
             date={element.date}
-            venue={element.venue} />
+            venue={element.venue}
+            toggleTour={this.props.toggleTour}
+
+            />
         })}
 
 

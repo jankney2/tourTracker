@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
     super()
     this.state= {
-      homepage:false,
+      homepage:true,
     }
   }
   
@@ -36,7 +36,7 @@ class App extends Component {
       <div>
         
       <Navbar toggleTour={this.toggleTour}/>
-      <ShowList />
+      <ShowList toggleTour={this.toggleTour}/>
 
 
       </div>

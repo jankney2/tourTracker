@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
+    "instafeed.js": "^1.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
@@ -25,10 +26,10 @@
     "not op_mini all"
   ],
   "main": "server/index.js",
-  "proxy": "http://localhost:5555", 
+  "proxy": "http://localhost:5555",
   "nodemonConfig": {
     "ignore": [
-      "src/*", 
+      "src/*",
       "public/*"
     ]
   }

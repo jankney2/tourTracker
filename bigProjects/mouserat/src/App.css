@@ -33,13 +33,14 @@ body {
   /* border-radius: 10px; */
   padding: 5px 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  transition: all 0.2s ease-in-out;
+  transition: all .33s ease-in-out;
 }
 
 .button:hover {
   background-color: #AB987A;
   color: #0F1626;
   border:solid 2px #AB987A;
+  border-radius: 10px;
   /* transition: background-color .5s ease-in-out; */
 
 

@@ -45,3 +45,9 @@
   /* width: 100px; */
   text-align: left;
 }
+
+.showContainer input {
+
+  margin: 5px 20px;
+
+}

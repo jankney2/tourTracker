@@ -33,27 +33,40 @@ export default class Show extends Component {
     this.setState({
       [name]: e.target.value
     })
-
+  
   }
+  
+  
+  putReq = (putId) => {
+  
+    axios.put(`/api/shows/${putId}`, this.state).then(
+  
+      (response) => {
+        // this.toggleEdit()
+        this.setState(response.data)
+      }
+  
+  
+    ).catch((err) => console.log("error", err)
+  
+    )
+  
+  
+  }
+  
+
 
   //small bugs
   //put request is done, but requires you to reload the page for changes to take effect. 
 
   //when you try to do a put request, if you type into a box then delete it, it comes back blank (you can ONLY type in to boxes that you want to edit)
-  putReq = (putId) => {
-
-    axios.put(`/api/shows/${putId}`, this.state).then(
-
-      (response) => {
-        // this.toggleEdit()
-        this.setState(response.data)
-      }
 
 
-    ).catch((err) => console.log("error", err)
-
-    )
-
+  changeHandler = (e) => {
+    let name = e.target.name
+    this.setState({
+      [name]: e.target.value
+    })
 
   }
 
@@ -87,6 +100,8 @@ export default class Show extends Component {
             this.putReq(this.props.position)
             this.toggleEdit()
             window.location.reload()
+
+            
           }}>Save</button>
             
             
@@ -103,18 +118,13 @@ export default class Show extends Component {
             <p>{this.props.date}</p>
             <p>{this.props.venue}</p>
             <p>{this.props.cityState}</p>
+          
+          
           </div>
           <div className="buttonContainer">
             <button className="button"
               onClick={() => {
                 this.toggleEdit()
-                //  show boxes for new values
-                // send values from new boxes in the request
-                //
-
-
-
-
               }}
 
             >Edit</button>

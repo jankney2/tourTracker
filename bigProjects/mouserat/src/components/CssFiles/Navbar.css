@@ -4,16 +4,12 @@
   justify-content: space-between;
   width:75%;
   margin:auto;
-  
-}
-
-.navBar h1 {
-/* 
-margin-left: 5%; */
 
 }
 
-
+.navBar * {
+  margin-top: 7vh;
+}
 
 .navBar button {
   border-color: #F5f5f5;
